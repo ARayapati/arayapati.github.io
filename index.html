@@ -96,12 +96,20 @@
             color: #475569;
         }
 
-        .project-card {
+        .project-card, .product-card {
             background: #fff;
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             border: 1px solid #e2e8f0;
+            margin-bottom: 2rem;
+        }
+
+        .product-tagline {
+            font-size: 1.1rem;
+            color: #475569;
+            font-weight: 500;
+            font-style: italic;
         }
 
         /* Simple fade-in animation */
@@ -146,13 +154,13 @@
         <h2>Navigation</h2>
         <button class="tab-btn active" onclick="openTab(event, 'about')">About Me</button>
         <button class="tab-btn" onclick="openTab(event, 'project')">Structured Stream Project</button>
+        <button class="tab-btn" onclick="openTab(event, 'junk-drawer')">Junk Drawer</button>
     </nav>
 
     <main class="main-content">
         
-               <!-- Tab 1: About Me -->
         <section id="about" class="tab-panel active">
-            <h1> Anusha Rayapati  </h1>
+            <h1>Anusha Rayapati</h1>
             <p style="font-size: 1.2rem; color: #38bdf8; font-weight: 600; margin-bottom: 2rem;">
                 Analytics Engineer & Data Product Developer
             </p>
@@ -171,7 +179,7 @@
                 </div>
                 <div style="background: #fff; padding: 1rem; border-radius: 6px; border: 1px solid #e2e8f0;">
                     <strong style="color: #1e293b; display: block; margin-bottom: 0.5rem;">🛠️ Core Expertise</strong>
-                     Analytics Engineering, ML & Data Apps, Context Engineering
+                    Analytics Engineering, ML & Data Apps, Context Engineering
                 </div>
                 <div style="background: #fff; padding: 1rem; border-radius: 6px; border: 1px solid #e2e8f0;">
                     <strong style="color: #1e293b; display: block; margin-bottom: 0.5rem;">☁️ Enterprise Platforms</strong>
@@ -210,28 +218,63 @@
             <div style="height: 25px;"></div>
             <div class="product-card">
                 <h3>📍 SweetSpot.io</h3>
-                <div style="height: 25px;"></div>
+                <div style="height: 15px;"></div>
                 <div class="product-tagline">Urban Spatial Optimization Engine</div>
-                <div style="height: 25px;"></div>
+                <div style="height: 15px;"></div>
                 <div class="problem-solution">
                     <p><strong>The Challenge:</strong> Home buyers face massive information overload when trying to balance subjective lifestyle preferences—such as transit access, walkability constraints, and hyper-local safety parameters—across completely disconnected municipal open datasets.</p>
-                    <p><strong>Product Overview:</strong> A "Life-Centric Real Estate Match Engine."  It standardizes unlinked public transit maps, walkability scores, and safety data into a centralized multi-objective optimization formula. Through an interactive heatmap interface, users can manipulate slider weights based on their unique priorities to immediately isolate their perfect geographic block. If you are unsure just highlight a geographic area on the map by zipcode/city to verify avg living expenses, school district ratings, employment opportunity scores and commute times to explore and find that sweet neighborhood spot you would love to settle.</p>
+                    <p><strong>Product Overview:</strong> A "Life-Centric Real Estate Match Engine." It standardizes unlinked public transit maps, walkability scores, and safety data into a centralized multi-objective optimization formula. Through an interactive heatmap interface, users can manipulate slider weights based on their unique priorities to immediately isolate their perfect geographic block. If you are unsure just highlight a geographic area on the map by zipcode/city to verify avg living expenses, school district ratings, employment opportunity scores and commute times to explore and find that sweet neighborhood spot you would love to settle.</p>
                 </div>
             </div>
 
             <div class="product-card">
                 <h3>🥗 Verified Bites</h3>
-                <div style="height: 25px;"></div>
+                <div style="height: 15px;"></div>
                 <div class="product-tagline">Predictive Restaurant Compliance & Transparency Platform</div>
-                <div style="height: 25px;"></div>
+                <div style="height: 15px;"></div>
                 <div class="problem-solution">
                     <p><strong>The Challenge:</strong> While popular crowdsourced dining applications excel at displaying user food reviews, they routinely obscure critical health, safety, and sanitation histories deep inside outdated, hard-to-navigate county government databases.</p>
                     <p><strong>Product Overview:</strong> A consumer transparency platform that reconciles highly asymmetric municipal health inspector records with live commercial location APIs. It translates raw, disparate inspection outcomes into a standardized, scannable 0–100 <i>Sanitation Risk Index (SRI)</i>. By applying an exponential time-decay function, recent critical violations heavily spike active visibility, while older historical infractions seamlessly trend toward zero risk.</p>
                 </div>
             </div>
         </section>
+
+        <section id="junk-drawer" class="tab-panel">
+            <h1>The Junk Drawer</h1>
+            <p style="font-size: 1.2rem; color: #f59e0b; font-weight: 600; margin-bottom: 2rem;">
+                IoT Experiments, Hardware Hacking & Hardware-Software Interfaces
+            </p>
+            
+            <p>
+                Every engineer needs a sandbox. This space is reserved for raw hardware experiments, edge computing builds, and IoT passion projects where software breaks out of the cloud and into the physical world.
+            </p>
+
+            <h2>IoT Projects</h2>
+            <div style="height: 25px;"></div>
+            
+            <div class="project-card">
+                <h3>👁️ PyClops</h3>
+                <div style="height: 15px;"></div>
+                <div class="product-tagline">Intelligent Edge Monitoring & Compute Rig</div>
+                <div style="height: 15px;"></div>
+                <div class="problem-solution">
+                    <p><strong>The Project:</strong> An edge-based camera setup designed to gather, filter, and stream event-driven spatial telemetry data locally. PyClops operates on low-power architectures, ensuring real-time capture doesn't require constant reliance on cloud endpoints.</p>
+                    <p><strong>Tech & Architecture:</strong> Built using Python, Raspberry Pi/Microcontrollers, local object detection structures, and MQTT protocols to broadcast lightweight event payloads to downstream analytical applications.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>✈️ JetVision</h3>
+                <div style="height: 15px;"></div>
+                <div class="product-tagline">Real-Time Aerial Transponder Streaming Pipeline</div>
+                <div style="height: 15px;"></div>
+                <div class="problem-solution">
+                    <p><strong>The Project:</strong> A physical antenna network rig processing raw radio frequencies emitted directly from aircraft. JetVision converts radio signals into immediate spatial geographic feeds, plotting live altitude, velocity, and trajectory changes.</p>
+                    <p><strong>Tech & Architecture:</strong> Utilizes RTL-SDR hardware receivers coupled with local decoding layers. Captured stream payloads are packaged into JSON frames, allowing high-throughput telemetry to feed custom UI maps or timeseries engines.</p>
+                </div>
+            </div>
+        </section>
         
-        <!-- Extra spacing element -->
         <div style="height: 100px;"></div>
         
         <footer class="contact-footer-card">
